@@ -78,7 +78,7 @@ const ThoughtController = {
                 res.status(500).json(err)
             }
         }
-    }
+    
 }
 
 module.exports = ThoughtController
