@@ -50,7 +50,35 @@ const ThoughtController = {
     },
     async createReaction(req, res) {
         try {
-            const thought 
+            const thought = await Thought.findOneAndUpdate(
+                {_id: req.params.thoughtId},
+                {$pull: {reactions: {reactionId: req.params.reactionId}}},
+                {runValidators: true, new: true}
+            )
+        if (!thought) {
+            res.status(404).json({ message: 'Thought not found' })
+        }
+        res.json(thought)
+        } catch (err) {
+            res.status(500).json(err)
+        }
+    },
+    async deleteReaction(req, res) {
+        try {
+            const thought = await Thought.findOneAndUpdate(
+                {_id: req.params.thoughtId},
+                {$pull: {reactions: {reactionId: req.params.reactionId}}},
+                {runValidators: true, new: true}
+            )
+            if (!thought) {
+                res.status(404).json({ message: 'Thought not found' })
+            }
+            res.json(thought)
+            } catch (err) {
+                res.status(500).json(err)
+            }
         }
     }
 }
+
+module.exports = ThoughtController
