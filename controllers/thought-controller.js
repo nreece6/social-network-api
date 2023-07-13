@@ -52,7 +52,7 @@ const ThoughtController = {
         try {
             const thought = await Thought.findOneAndUpdate(
                 {_id: req.params.thoughtId},
-                {$pull: {reactions: {reactionId: req.params.reactionId}}},
+                {$addToSet: {reactions: req.body }},
                 {runValidators: true, new: true}
             )
         if (!thought) {

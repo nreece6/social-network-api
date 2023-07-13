@@ -41,7 +41,7 @@ const UserController = {
         .catch(err => res.status(500).json(err))
     },
     addFriend(req, res) {
-        User.findONeandUpdate(
+        User.findOneAndUpdate(
             { _id: req.params.userId },
             { $addToSet: { friends: req.body.friendId || req.params.friendId}},
             { new: true }
@@ -52,7 +52,7 @@ const UserController = {
             }
             res.json(userData)
         })
-        .catch(errr => res.status(500).json(err))
+        .catch(err => res.status(500).json(err))
     },
 
     removeFriend({ params }, res) {
