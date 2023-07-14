@@ -37,6 +37,7 @@ const UserController = {
             if (!userData) {
                 return res.status(404).json({ message: 'User not found '})
             }
+            res.json({ message: 'Succesfully deleted user' })
         })
         .catch(err => res.status(500).json(err))
     },

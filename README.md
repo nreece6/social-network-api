@@ -45,11 +45,11 @@ The server will run locally. You can interact with the API endpoints using Insom
 
 Once you have cloned the repo, installed the necessary dependencies, and started the server, use Insomnia to interact with the API endpoints at https://localhost:3001. The available endpoints are:
 
-1. GET /api/users - get all users
-2. GET /api/users/:userId - get a single user by ID
-3. POST /api/users - create a new user
-4. PUT /api/users/:userId - update a user by ID
-5. DELETE /api/users/:userId - delete a user by ID
+1. GET /api/user - get all users
+2. GET /api/user/:userId - get a single user by ID
+3. POST /api/user - create a new user
+4. PUT /api/user/:userId - update a user by ID
+5. DELETE /api/user/:userId - delete a user by ID
 6. GET /api/thought - get all thought
 7. GET /api/thought/:thoughtId - get a single thought by ID
 8. POST /api/thought - create a new thought
@@ -57,12 +57,12 @@ Once you have cloned the repo, installed the necessary dependencies, and started
 10. DELETE /api/thought/:thoughtId - delete a thought by ID
 11. POST /api/thought/:thoughtId/reactions - add a reaction to a thought
 12. DELETE /api/thought/:thoughtId/reactions/:reactionId - remove a reaction from a thought
-13. POST /api/users/:userId/friends/:friendId - add a friend to a user's friend list
-14. DELETE /api/users/:userId/friends/:friendId - remove a friend from a user's friend list
+13. POST /api/user/:userId/friends/:friendId - add a friend to a user's friend list
+14. DELETE /api/user/:userId/friends/:friendId - remove a friend from a user's friend list
 
 Video example of usage available at:
 
-https://drive.google.com/file/d/1K5ommYKuTY64MITOlvdvr4XmQ8wwWkgY/view
+https://drive.google.com/file/d/1jN2oOS-tOBQKkL_ootofeL7N8URIJSPS/view
 
 Run the program in the terminal using 
 ```
